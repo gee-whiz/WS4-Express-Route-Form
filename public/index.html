@@ -3,9 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World</title>
+    <title>Form</title>
 </head>
 <body>
-    <h1>Hello World</h1>
+    
+    <!-- Form that sends a POST request to /search -->
+    <form action="/search" method="post">
+      <!-- Text input where the user types the search term, sent as field "q" -->
+      <input name="q" placeholder="Search term">
+
+      <!-- Drop-down to choose which API source to query (DemoJSON or GitHub) -->
+      <label for="src">API Source:</label>
+      <select id="src" name="src">
+        <option value="demo">DemoJSON</option>
+        <option value="github">GitHub</option>
+      </select>
+
+      <!-- Button that submits the form -->
+      <button type="submit">Search</button>
+    </form>
 </body>
 </html>
